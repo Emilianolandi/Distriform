@@ -1,15 +1,11 @@
 /* Estilos generales */
 body {
-    font-family: Arial, sans-serif;
-    /* background: linear-gradient(to bottom right, red, blue, green, yellow); */
-    background: linear-gradient(to bottom right, rgb(254, 253, 253),rgb(219, 216, 216), rgb(222, 222, 227), rgb(1, 2, 14));
-
-    margin: 0;
-
-    align-items: center;
-    justify-content: center;
- 
-    padding: 0;
+    background-color: #4a4a4a; /* Color de fondo */
+    background-image: url('FONDO.JPG'); /* Ruta de la imagen de textura rugosa */
+    background-size: cover; /* Ajusta el tamaño de la imagen para cubrir el contenedor */
+    background-blend-mode: overlay; /* Mezcla el color de fondo con la textura */
+    color: white; /* Color del texto, ajusta según sea necesario */
+    padding: 20px; /* Añade espacio alrededor del contenido */
 }
 /* ESTO PERTENECE AL MENU DE NAVEGACION */
 .menu-icon {
@@ -94,7 +90,10 @@ body {
 
 /* Estilos para etiquetas y campos de entrada */
 label {
-    display: block;
+
+    color: #18191a;
+    display: flex;
+
     margin-bottom: 8px;
 }
 

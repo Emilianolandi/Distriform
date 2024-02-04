@@ -1,3 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+    <style>
+        /* Estilo para tarjetas en dispositivos móviles */
+        @media only screen and (max-width: 600px) {
+            .tarjeta {
+                width: 100%; /* O ajusta el ancho según sea necesario */
+                margin: 0 auto; /* Centra la tarjeta */
+            }
+        }
+    </style>
+</head>
+<body>
 
 <?php
 // Conexión a la base de datos
@@ -49,6 +68,17 @@ if (!$result) {
             slidesToScroll: 1,
             autoplay: true,
             autoplaySpeed: 1500,
+            responsive: [
+                {
+                    breakpoint: 600, // Cambia el número según sea necesario
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        infinite: true,
+                        dots: true
+                    }
+                }
+            ]
         });
     });
 </script>
@@ -57,3 +87,5 @@ if (!$result) {
 // Cerrar la conexión
 $conn->close();
 ?>
+</body>
+</html>
