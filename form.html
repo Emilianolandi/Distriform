@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="stylos.css">
+    <!-- <link rel="stylesheet" href="stilos.css">  -->
+    <title>FORMULARIO</title>
+</head>
+<body>
+
+    <div class="menu-icon" onclick="toggleMenu()">
+        <p class="logo">
+            <img src="logo.jpg" alt="Logo" class="logo" style="width: 100px; height: auto;">
+        </p>
+<div class="line"></div>
+<div class="line"></div>
+<div class="line"></div>
+</div>
+
+<nav class="menu">
+<ul>
+    <li><a href="index.php">Inicio</a></li>
+
+    <li><a href="form.html">Contacto</a></li>
+</ul>
+</nav>
+<H1 class="TITULO">REGISTRATE</H1>
+<section class="formulario">
+    <form action="#" name="form_contacto" id="form_contacto">
+        <div>
+            <label for="nombre">Nombre </label>
+            <input type="text" id="nombre" name="nombre" class="input-field">
+            <div id="error_nombre" class="error-message"></div>
+        </div>
+        <div>
+            <label for="apellido">Apellido </label>
+            <input type="text" id="apellido" name="apellido" class="input-field">
+            <div id="error_apellido" class="error-message"></div>
+        </div>
+        <div>
+            <label for="telefono">Teléfono</label>
+            <input type="tel" id="telefono" name="telefono" class="input-field" oninput="this.value = this.value.replace(/[^0-9]/g, '');">
+            
+        </div>
+        <div>
+            <label for="email">Email </label>
+            <input type="text" id="email" name="email" class="input-field">
+            <div id="error_email" class="error-message"></div>
+        </div>
+        <div>
+            <label for="tipoContacto">Tipo de contacto </label>
+            <select id="tipoContacto" name="tipoContacto" class="input-field">
+                <option value="soporte">Soporte</option>
+                <option value="ventas">Ventas</option>
+            </select>
+            <div id="error_tipoContacto" class="error-message"></div>
+        </div>
+        <div>
+            <label for="asunto">Asunto </label>
+            <input type="text" id="asunto" name="asunto" class="input-field">
+            <div id="error_asunto" class="error-message"></div>
+        </div>
+        <div>
+            <label for="descripcion">Descripción </label>
+            <textarea id="descripcion" name="descripcion" class="input-field"></textarea>
+            <div id="error_descripcion" class="error-message"></div>
+        </div>
+        <div id="camposObligatorios" class="error-message"></div>
+        <button type="button" id="enviarBtn">Enviar</button>
+        <div id="mensaje"></div>
+    </form>
+</body>
+<script src="formulario.js"></script>
+<script src="script.js"></script>
+</html>

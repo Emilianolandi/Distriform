@@ -1,0 +1,191 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient rgb(254, 253, 253),rgb(219, 216, 216), rgb(222, 222, 227), rgb(1, 2, 14);
+
+}
+.titulo_index{
+    background-color: #333;
+}
+/* ESTO PERTENECE AL MENU DE NAVEGACION */
+.menu-icon {
+    background: radial-gradient(circle, #eff1f2, #5b5f60, #18191a);
+
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.line {
+    width: 30px;
+    height: 3px;
+    background-color: #fbf9f9;
+    margin: 6px 0;
+}
+
+.menu {
+    display: none;
+    background-color: #333;
+    overflow: hidden;
+}
+@media only screen and (max-width: 600px) {
+    .menu{
+        display: flex;
+    }
+}
+
+.menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li {
+    float: left;
+}
+
+.menu a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.menu a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.menu.active {
+    display: flex;
+}
+
+@media only screen and (max-width: 600px) {
+    .menu {
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+    }
+
+  
+}
+/* Estilos para el contenedor de tarjetas */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+/* Estilos para cada tarjeta */
+.tarjeta {
+    width: 100px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+     transition: transform 0.3s ease; 
+    background-image: url(card2.jpg);
+    background-size: cover;
+   cursor: pointer;
+   
+   
+   
+}
+
+.tarjeta:hover {
+    transform: scale(1.05);
+}
+
+.tarjeta h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    color:  rgb(2, 2, 2);
+}
+
+.tarjeta p {
+    font-size: 20px;
+    color: #555;
+    display: flex;
+    justify-content: center;
+    color:  rgb(2, 2, 2);
+
+}
+
+/* Estilos para la imagen dentro de la tarjeta */
+.tarjeta img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+@media screen and (max-width: 768px) {
+    .tarjeta {
+        width: calc(50% - 20px);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .tarjeta {
+        width: calc(100% - 20px);
+    }
+}
+
+
+
+.logo {
+    display: flex;
+    justify-content: end;
+}
+.slick-slide .tarjeta {
+    width: 80%;
+    border: 3px solid #e32525;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #b72d2d;
+    transition: transform 0.3s ease;
+    display: flex;
+    align-items: center;
+}
+
+.slick-slide .tarjeta:hover {
+    transform: scale(1.05);
+}
+
+.slick-slide .tarjeta h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.slick-slide .tarjeta p {
+    font-size: 1em;
+    color: #555;
+}
+
+/* Estilos para la imagen dentro de las tarjetas dentro del slider */
+.slick-slide .tarjeta img {
+    max-width: 60%;
+    height: auto;
+    border-radius: 4px;
+}
+
+h1{
+    
+  
+     background: linear-gradient(to bottom right, rgb(255, 255, 255),  rgb(19, 6, 74), rgb(0, 3, 10)); 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 2em;
+    color: white; /* Color del texto */
+    mix-blend-mode: difference;
+}
+

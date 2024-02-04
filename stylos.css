@@ -1,0 +1,136 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    /* background: linear-gradient(to bottom right, red, blue, green, yellow); */
+    background: linear-gradient(to bottom right, rgb(254, 253, 253),rgb(219, 216, 216), rgb(222, 222, 227), rgb(1, 2, 14));
+
+    margin: 0;
+
+    align-items: center;
+    justify-content: center;
+ 
+    padding: 0;
+}
+/* ESTO PERTENECE AL MENU DE NAVEGACION */
+.menu-icon {
+    /* background: linear-gradient(to bottom right, #333333, #555555, #777777); */
+    /* background: linear-gradient(to bottom right, #e6e5e5, #2a2523, #090602); */
+    /* background: linear-gradient(to bottom right, #0a0a0a, #848584, #f8f6f6); */
+    /* background: linear-gradient(to right, #000000, #ffffff); */
+    background: radial-gradient(circle, #eff1f2, #5b5f60, #18191a);
+
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+}
+
+.line {
+    width: 30px;
+    height: 3px;
+    background-color: #fcfbfb;
+    margin: 6px 0;
+}
+
+.menu {
+    display: none;
+    background-color: #333;
+    overflow: hidden;
+}
+
+.menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li {
+    float: left;
+}
+
+.menu a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.menu a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.menu.active {
+    display: flex;
+}
+
+@media only screen and (max-width: 600px) {
+    .menu {
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+    }
+
+    .menu-icon {
+        display: flex;
+    }
+}
+.logo {
+    display: flex;
+    justify-content: end;
+    
+} 
+.formulario {
+    max-width: 600px;
+    margin: 20px auto;
+    background: linear-gradient(to bottom right, rgb(254, 253, 253),rgb(219, 216, 216), rgb(49, 49, 50), rgb(1, 2, 14));
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    
+}
+
+/* Estilos para etiquetas y campos de entrada */
+label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+.input-field {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Estilos para mensajes de error */
+.error-message {
+    color: red;
+    margin-top: 4px;
+}
+
+/* Estilos para el botón de enviar */
+.submit-button {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.submit-button:hover {
+    background-color: #45a049;
+}
+
+/* Estilos para el mensaje de agradecimiento */
+#mensaje {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #fafdfa;
+}
