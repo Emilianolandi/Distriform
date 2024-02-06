@@ -1,12 +1,11 @@
 body {
-  /* Estilo para un contenedor con color y textura rugosa */
-
-    background-color: #4a4a4a; /* Color de fondo */
-    background-image: url('FONDO.JPG'); /* Ruta de la imagen de textura rugosa */
-    background-size: cover; /* Ajusta el tamaño de la imagen para cubrir el contenedor */
-    background-blend-mode: overlay; /* Mezcla el color de fondo con la textura */
-    color: white; /* Color del texto, ajusta según sea necesario */
-    padding: 20px; /* Añade espacio alrededor del contenido */
+ 
+  margin: 0;
+  padding: 20px;
+    background-color: #4a4a4a; 
+    background-image: url('img/FONDO.JPG'); /* Ruta de la imagen de textura rugosa */
+    background-size: cover; /* Ajusta  tamaño de la imagen para cubrir el contenedor */
+     background-blend-mode:difference;
 }
 
 
@@ -25,7 +24,7 @@ body {
 @keyframes aparecerLetras {
     from {
         opacity: 0;
-        transform: translateY(50px); /* Mover las letras hacia arriba al principio */
+        transform: translateY(80px); /* Mover las letras hacia arriba al principio */
     }
     to {
         opacity: 1;
@@ -33,19 +32,66 @@ body {
     }
 }
 .title span {
-    display: inline-block; /* Para que cada letra ocupe su propio espacio */
-    opacity: 0.2; /* Inicialmente, las letras están ocultas */
-    animation: aparecerLetras 0.5s forwards; /* Aplicar la animación */
-    animation-delay: calc(0.1s * var(--letra-index)); /* Retraso para cada letra */
+    display: inline-block; 
+    opacity: 0.2; 
+    animation: aparecerLetras 0.5s forwards; 
+    animation-delay: calc(0.1s * var(--letra-index)); 
 }
-/* ESTO PERTENECE AL MENU DE NAVEGACION */
+
+.title_card{
+    color: #ddd;
+    font-size: 15px;
+    display: flex;
+    justify-content: space-evenly;
+}
+.title_card {
+    overflow: hidden; 
+    white-space: nowrap;
+}
+
+.title_card span {
+    display: inline-block;
+    opacity: 0; 
+    transform: translateX(100%); 
+    animation: fadeInRight 0.5s forwards; 
+}
+
+
+@keyframes fadeInRight {
+    to {
+        opacity: 1; 
+        transform: translateX(0);
+    }
+}
+
+/* retraso a cada letra para que aparezcan secuencialmente */
+.title_card span:nth-child(1) { animation-delay: 0.1s; }
+.title_card span:nth-child(2) { animation-delay: 0.2s; }
+.title_card span:nth-child(3) { animation-delay: 0.3s; }
+.title_card span:nth-child(4) { animation-delay: 0.4s; }
+.title_card span:nth-child(5) { animation-delay: 0.5s; }
+.title_card span:nth-child(6) { animation-delay: 0.6s; }
+.title_card span:nth-child(7) { animation-delay: 0.7s; }
+.title_card span:nth-child(8) { animation-delay: 0.8s; }
+.title_card span:nth-child(9) { animation-delay: 0.9s; }
+.title_card span:nth-child(10) { animation-delay: 0.10s; }
+.title_card span:nth-child(11) { animation-delay: 0.11s; }
+.title_card span:nth-child(12) { animation-delay: 0.12s; }
+.title_card span:nth-child(13) { animation-delay: 0.13s; }
+.title_card span:nth-child(14) { animation-delay: 0.14s; }
+.title_card span:nth-child(15) { animation-delay: 0.15s; }
+.title_card span:nth-child(16) { animation-delay: 0.16s; }
+.title_card span:nth-child(17) { animation-delay: 0.17s; }
+
+
+/* MENU DE NAVEGACION */
 .menu-icon {
     background: radial-gradient(circle, #eff1f2, #5b5f60, #18191a);
 
     cursor: pointer;
     display: flex;
     flex-direction: column;
-    padding: 10px;
+    padding: 2px;
 }
 
 .line {
@@ -56,6 +102,7 @@ body {
 }
 
 .menu {
+    padding: 20px   ;
     display: none;
     background-color: #333;
     overflow: hidden;
@@ -100,10 +147,18 @@ body {
         top: 60px;
         left: 0;
     }
-
-  
+    .menu-icon {
+        display: flex;
+    }
 }
-/* Estilos para el contenedor de tarjetas */
+.logo {
+    display: flex;
+    justify-content: end;
+    
+} 
+  
+
+/*  contenedor de tarjetas */
 .card-container {
     display: flex;
     flex-wrap: wrap;
@@ -112,20 +167,16 @@ body {
 
 
 /* Estilos para cada tarjeta */
-/* Textura con una imagen */
-.background-texture .tarjeta{
-    background: url('card2.jpg') repeat;
-}
 
-/* Textura con un patrón */
+
+
 .background-pattern {
     background: repeating-linear-gradient(45deg, #fff, #fff 10px, #eee 10px, #eee 20px);
 }
 
 .tarjeta {
-    /* background: radial-gradient(circle, #eff1f2, #5b5f60, #18191a); */
-    /* background: linear-gradient() rgb(254, 253, 253),rgb(219, 216, 216), rgb(222, 222, 227), rgb(1, 2, 14); */
-   
+    
+   background-image: url(img/card2.jpg);
     width: 200px;
     border: 1px solid #ccc;
     border-radius: 8px;
@@ -133,14 +184,13 @@ body {
     margin: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
    
-    overflow: hidden; /* Para asegurar que el contenido no se desborde */
-    position: relative; /* Para posicionar correctamente el contenido absoluto */
-    /* background: linear-gradient(to right, #f0f0ef, #4e4b4b), url('card2.jpg') repeat; */
-    background: linear-gradient(to right, #33ccff, #ff9900), repeating-linear-gradient(45deg, #fff, #fff 10px, #eee 10px, #eee 20px);
+    overflow: hidden; 
+    position: relative; 
+    
 }
 
 
-/* Animación de oscilación */
+/* Animación */
 @keyframes oscilar {
     0%, 100% {
         transform: translateY(0);
@@ -150,17 +200,14 @@ body {
     }
 }
 
-/* Estilos para el texto dentro de la tarjeta */
+/*  texto dentro de la tarjeta */
 .tarjeta h2 {
     font-size: 1.5em;
     margin-bottom: 10px;
-    animation: oscilar 1s infinite; /* Aplicar la animación */
+    animation: oscilar 1s infinite;
 }
 
-.tarjeta p {
-    font-size: 1em;
-    color: #555;
-}
+
 
 .tarjeta:hover {
     transform: scale(1.05);
@@ -171,19 +218,19 @@ body {
     margin-bottom: 10px;
     display: flex;
     justify-content: center;
-    color:  rgb(2, 2, 2);
+    color:  rgb(249, 247, 247);
 }
 
 .tarjeta p {
     font-size: 20px;
-    color: #555;
+    color: #fcfafa;
     display: flex;
     justify-content: center;
-    color:  rgb(2, 2, 2);
+   
 
 }
 
-/* Estilos para la imagen dentro de la tarjeta */
+/*  tarjeta */
 .tarjeta img {
     max-width: 100%;
     height: auto;
@@ -233,7 +280,7 @@ body {
     color: #555;
 }
 
-/* Estilos para la imagen dentro de las tarjetas dentro del slider */
+/* slider */
 .slick-slide .tarjeta img {
     max-width: 60%;
     height: auto;
@@ -249,7 +296,76 @@ h1{
     justify-content: center;
     text-align: center;
     font-size: 2em;
-    color: white; /* Color del texto */
+    color: white; 
     mix-blend-mode: difference;
 }
 
+.tarjeta_word {
+    width: 30%;
+    background-color: #111010;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+   
+}
+
+
+.tarjeta_word:hover {
+    transform: scale(1.05);
+}
+
+.informacion {
+    display: none;
+    background-color: #0e0d0d;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.informacion button {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+.datos_emp{
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        margin-top: 30px;
+    }
+    
+        footer {
+            display: flex;
+            justify-content: space-around;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px; 
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        
+        .redes-sociales {
+            display: flex;
+            justify-content: center;
+            margin-top: 15px; 
+        }
+        
+        .redes-sociales a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 16px; 
+        }

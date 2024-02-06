@@ -35,7 +35,7 @@
 </nav>
 <div class="title">
 
-<span style="--letra-index: 1;">S</span>
+        <span style="--letra-index: 1;">S</span>
         <span style="--letra-index: 2;">o</span>
         <span style="--letra-index: 3;">m</span>
         <span style="--letra-index: 4;">o</span>
@@ -82,8 +82,6 @@
         <span style="--letra-index: 7;">O</span>
         <span style="--letra-index: 8;">S</span>
         <span style="--letra-index: 9;"></span>
-        <span style="--letra-index: 10;"></span>
-        <span style="--letra-index: 11;"></span>
         <span style="--letra-index: 12;">P</span>
         <span style="--letra-index: 13;">R</span>
         <span style="--letra-index: 14;">O</span>
@@ -98,15 +96,49 @@
         <span style="--letra-index: 23;"></span>
         
     </p>
+</div>
     <?php include 'productos.php'?>
 
 
 <div id="cards-container">
+
+
+<div class="datos_emp">
+<div class="tarjeta_word" id="misionTarjeta" onclick="mostrarInformacion('mision')">
+    <h2>Misión</h2>
+    <p>Estamos comprometidos a...</p>
+</div>
+
+<div class="tarjeta_word" id="visionTarjeta" onclick="mostrarInformacion('vision')">
+    <h2>Visión</h2>
+    <p>Nos visualizamos como...</p>
+</div>
+
+<div class="informacion" id="informacionMision">
+    <h2>Misión</h2>
+    <p>En [Nombre de la Distribuidora], nos dedicamos a ofrecer productos de alta calidad y servicios excepcionales a nuestros clientes...</p>
+    <button onclick="ocultarInformacion('mision')">Cerrar</button>
+</div>
+
+<div class="informacion" id="informacionVision">
+    <h2>Visión</h2>
+    <p>Nos visualizamos como líderes reconocidos en la industria de distribución, destacando por nuestra excelencia operativa y compromiso con la satisfacción del cliente...</p>
+    <button onclick="ocultarInformacion('vision')">Cerrar</button>
+</div>
 </div>
 </div>
 <br>
+    <br>
 <footer>
-    <h1>hola</h1>
+<p>&copy; 2024 Tu Distribuidora. Todos los derechos reservados.</p>
+    
+<a href="https://github.com/Emilianolandi" target="_blank"><img src="img/github_logo.png" alt="Facebook" width="40px", height="40px"></a>
+            <a href="#" target="_blank"><img src="img/face.png" alt="Twitter"></a>
+            <a href="#" target="_blank"><img src="img/insta.png" alt="Instagram"></a>
+        
+    
+   
+
 </footer>
 </body>
 <script src="script.js"></script>

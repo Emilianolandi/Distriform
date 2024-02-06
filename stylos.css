@@ -1,7 +1,9 @@
-/* Estilos generales */
+
 body {
+    margin: 0;
+    padding: 0;
     background-color: #4a4a4a; /* Color de fondo */
-    background-image: url('FONDO.JPG'); /* Ruta de la imagen de textura rugosa */
+    background-image: url('img/FONDO.JPG'); /* Ruta de la imagen de textura rugosa */
     background-size: cover; /* Ajusta el tamaño de la imagen para cubrir el contenedor */
     background-blend-mode: overlay; /* Mezcla el color de fondo con la textura */
     color: white; /* Color del texto, ajusta según sea necesario */
@@ -32,6 +34,11 @@ body {
     display: none;
     background-color: #333;
     overflow: hidden;
+}
+@media only screen and (max-width: 600px) {
+    .menu{
+        display: flex;
+    }
 }
 
 .menu ul {
@@ -75,7 +82,7 @@ body {
 }
 .logo {
     display: flex;
-    justify-content: end;
+    justify-content: center;
     
 } 
 .formulario {
@@ -88,7 +95,7 @@ body {
     
 }
 
-/* Estilos para etiquetas y campos de entrada */
+/* campos de entrada */
 label {
 
     color: #18191a;
@@ -112,24 +119,27 @@ label {
     margin-top: 4px;
 }
 
-/* Estilos para el botón de enviar */
+/*  botón de enviar */
 .submit-button {
     background-color: #4caf50;
     color: #fff;
-    padding: 10px 20px;
+    padding: 20px 20px;
     border: none;
-    border-radius: 4px;
+    border-radius: 14px;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 18px;
 }
 
 .submit-button:hover {
     background-color: #45a049;
 }
 
-/* Estilos para el mensaje de agradecimiento */
+/* mensaje de agradecimiento */
 #mensaje {
     margin-top: 20px;
     font-size: 18px;
     color: #fafdfa;
 }
+ footer{
+    background-color: #ccc;
+ }
