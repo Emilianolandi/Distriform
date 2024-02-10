@@ -98,7 +98,7 @@
     </p>
 </div>
     <?php include 'productos.php'?>
-
+<br>
 <div class="container">
     <p class="relleno">Las bebidas refrescantes nacieron hace más de dos siglos, a finales del XVIII. Muchas de ellas tuvieron su origen en el ámbito de la farmacia y se solían tomar para paliar pequeñas afecciones.
 
@@ -121,13 +121,14 @@ Se consiguió producir bebidas refrescantes de gran calidad. De hecho, en alguno
 <<div id="cards-container">
     <div class="datos_emp">
         <div class="tarjeta_word" id="misionTarjeta" onclick="mostrarInformacion('mision')">
-            <h2>Misión</h2>
-            <p>Estamos comprometidos a...</p>
+            <h2> Nuestra <br>Misión</h2>
+            
         </div>
 <br>
         <div class="tarjeta_word" id="visionTarjeta" onclick="mostrarInformacion('vision')">
-            <h2>Visión</h2>
-            <p>Nos visualizamos como...</p>
+        <h2>Nuestra 
+        <br>
+        Visión</h2>
         </div>
 
         <div class="informacion" id="informacionMision">

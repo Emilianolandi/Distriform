@@ -2,14 +2,14 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: #4a4a4a; /* Color de fondo */
-    background-image: url('img/FONDO.JPG'); /* Ruta de la imagen de textura rugosa */
-    background-size: cover; /* Ajusta el tamaño de la imagen para cubrir el contenedor */
-    background-blend-mode: overlay; /* Mezcla el color de fondo con la textura */
-    color: white; /* Color del texto, ajusta según sea necesario */
-    padding: 20px; /* Añade espacio alrededor del contenido */
+    background-color: #4a4a4a; 
+    background-image: url('img/FONDO.JPG'); 
+    background-size: cover; 
+    background-blend-mode: overlay; 
+    color: white;
+    padding: 20px; 
 }
-/* ESTO PERTENECE AL MENU DE NAVEGACION */
+ /* //////////////////////NAVEGACION */ 
 .menu-icon {
     /* background: linear-gradient(to bottom right, #333333, #555555, #777777); */
     /* background: linear-gradient(to bottom right, #e6e5e5, #2a2523, #090602); */
@@ -85,6 +85,43 @@ body {
     justify-content: center;
     
 } 
+
+
+.REGISTRATE H1 span {
+    transform: translateX(20px);
+    display: inline-block;
+    animation: fadeInRight 0.5s forwards;
+}
+
+/* Retraso  letra para que aparezca */
+.REGISTRATE H1 span:nth-child(1) { animation-delay: 0.1s; }
+.REGISTRATE H1 span:nth-child(2) { animation-delay: 0.2s; }
+.REGISTRATE H1 span:nth-child(3) { animation-delay: 0.3s; }
+.REGISTRATE H1 span:nth-child(4) { animation-delay: 0.4s; }
+.REGISTRATE H1 span:nth-child(5) { animation-delay: 0.5s; }
+.REGISTRATE H1 span:nth-child(6) { animation-delay: 0.6s; }
+.REGISTRATE H1 span:nth-child(7) { animation-delay: 0.7s; }
+.REGISTRATE H1 span:nth-child(8) { animation-delay: 0.8s; }
+.REGISTRATE H1 span:nth-child(9) { animation-delay: 0.9s; }
+.REGISTRATE H1 span:nth-child(10) { animation-delay: 0.10s; }
+.REGISTRATE H1 span:nth-child(11) { animation-delay: 0.11s; }
+.REGISTRATE H1 span:nth-child(12) { animation-delay: 0.12s; }
+.REGISTRATE H1 span:nth-child(13) { animation-delay: 0.13s; }
+
+
+@keyframes fadeInRight {
+    to {
+        opacity: 1; 
+        transform: translateX(0);
+    }
+}
+
+.REGISTRATE{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* /////////////////////FORMULARIO/////////////// */
 .formulario {
     max-width: 600px;
     margin: 20px auto;
@@ -97,16 +134,31 @@ body {
 
 /* campos de entrada */
 label {
-
+    font-family: Arial, Helvetica, sans-serif;
     color: #18191a;
     display: flex;
 
     margin-bottom: 8px;
 }
+.button {
+    font-size: large;
+    width: 100%;
+    padding: 10px;
+    margin-top: 15px;
+    background-color: #fcfdfc;
+    color: #030303;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #f8f5f5;
+}
 
 .input-field {
     width: 100%;
-    padding: 8px;
+    padding: 15px;
     margin-bottom: 16px;
     box-sizing: border-box;
     border: 1px solid #ccc;

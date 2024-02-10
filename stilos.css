@@ -312,6 +312,7 @@ h1{
     transform: translateX(20px); 
        color: #ddd;
     animation: fadeInRight 5s ease-in-out forwards;
+    letter-spacing: 2px;
 }
 
 
@@ -327,14 +328,6 @@ h1{
     }
 }
 
-@keyframes cambiarColor {
-    0% {
-        filter: hue-rotate(0deg);
-    }
-    100% {
-        filter: hue-rotate(360deg);
-    }
-}
 
 .contenedor {
     display: flex;
@@ -344,23 +337,33 @@ h1{
 }
 
 .imagen-container {
-    width: 50%;
     position: relative;
+    width: 50%;  
 }
-.imagen-container img{
-    width: 100%; 
-    height: auto; 
-    display: block; 
-    
-}
+
 .imagen-color-animada {
-    width: 200px; /* Ajusta el tamaño según sea necesario */
+    width: 200px; 
     height: 200px;
-    
+    animation: cambiarColor 5s linear infinite; 
 }
+.imagen-container img {
+    width: 100%; 
+    height: auto;
+    animation: cambiarColor 5s linear infinite;
+}
+
+@keyframes cambiarColor {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}
+
     .datos_emp {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 .datos_emp {
@@ -368,13 +371,16 @@ h1{
 }
 
 .tarjeta_word {
-    background: linear-gradient(45deg, #000, #fff, #000);
+    background-color: #000;
+    /* background: linear-gradient(45deg, #000, #fff, #000); */
     border: 1px solid #ccc;
-    padding: 10px;
-    margin: 10px;
+    padding: 100px;
+    margin: 100px;
     cursor: pointer;
     font-size: larger;
     overflow: hidden; 
+    opacity: 0.5;
+   
 }
 
 /* Agrega la animación a las tarjetas */
@@ -400,7 +406,11 @@ h1{
 .tarjeta_word:hover {
     animation: moveLetters 0.5s ease-in-out infinite;
 }
-
+.tarjeta_word h2{
+    color: #fafafa;
+    align-items: center;
+    opacity: 10;
+}
 
 .informacion {
     display: none;
@@ -412,6 +422,9 @@ h1{
     padding: 20px;
     border: 3px solid #ccc;
     animation: fadeInOut 0.5s ease-in-out;
+}
+.informacion h2{
+    color: #b72d2d;
 }
 
 
