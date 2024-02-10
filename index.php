@@ -147,6 +147,7 @@ Se consiguió producir bebidas refrescantes de gran calidad. De hecho, en alguno
 
 <br>
     <br>
+    <!-- ///////////////////////////FOOTER///////////////////////// -->
 <footer>
 <p>&copy; 2024 Tu Distribuidora. Todos los derechos reservados.</p>
 <div class="redes-sociales">

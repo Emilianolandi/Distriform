@@ -21,12 +21,12 @@
 <?php
 // Conexión a la base de datos
 $servername = "localhost";
-// $username = "id21638115_emiliano";
-$username = "root";
-// $password = "Emiliano21*.";
-$password = "";
-// $dbname = "id21638115_distribuidora";
-$dbname = "distribuidora_24";
+ $username = "id21638115_emiliano";
+// $username = "root";
+ $password = "Emiliano21*.";
+// $password = "";
+ $dbname = "id21638115_distribuidora";
+// $dbname = "distribuidora_24";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 
@@ -47,7 +47,7 @@ if (!$result) {
 
 <div class="card-container">
     <?php
-    //  mostrar cada producto en una tarjeta
+    //   producto en una tarjeta
     while ($row = $result->fetch_assoc()) {
     ?>
         <div class="tarjeta">
