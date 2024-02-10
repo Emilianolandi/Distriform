@@ -302,6 +302,7 @@ h1{
 .container {
     display: flex;
     width: 100%;
+    background-color: #000;
 }
 
 .relleno {
@@ -310,11 +311,11 @@ h1{
     opacity: 0;
     transform: translateX(20px); 
        color: #ddd;
-    
-    animation: fadeInRight 1s ease-in-out forwards;
+    animation: fadeInRight 5s ease-in-out forwards;
 }
 
 
+   
 @keyframes fadeInRight {
     from {
         opacity: 0;
@@ -326,23 +327,38 @@ h1{
     }
 }
 
+@keyframes cambiarColor {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}
+
+.contenedor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
 .imagen-container {
     width: 50%;
-    overflow: hidden;
+    position: relative;
 }
-
-
-.imagen-container img {
-    width: 100%;
-    transition: transform 0.5s ease-in-out;
+.imagen-container img{
+    width: 100%; 
+    height: auto; 
+    display: block; 
+    
 }
-
-
-.imagen-container:hover img {
-    transform: scale(1.1);
+.imagen-color-animada {
+    width: 200px; /* Ajusta el tamaño según sea necesario */
+    height: 200px;
+    
 }
-
-.datos_emp {
+    .datos_emp {
     display: flex;
     justify-content: space-between;
 }

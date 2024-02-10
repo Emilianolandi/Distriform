@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
     };
 
     const enviarFormulario = () => {
-        // Simular la solicitud AJAX para cargar el mensaje desde el archivo mensaje.txt
+        //  cargar el mensaje desde el archivo mensaje.txt
         const xhr = new XMLHttpRequest();
         xhr.onreadystatechange = function() {
             if (xhr.readyState === 4) {

@@ -8,7 +8,7 @@
 <link rel="stylesheet" href="stilos.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
-    <!-- <link rel="stylesheet" href="stylos.css"> -->
+ 
     <title>Formulario</title>
 </head>
 <body>
@@ -115,7 +115,7 @@ Se consiguió producir bebidas refrescantes de gran calidad. De hecho, en alguno
 </p>
 <div class="imagen-container">
             
-            <img src="img/4.jpg" alt="Descripción de la imagen">
+            <img src="img/4.jpg" alt="Descripción de la imagen" >
         </div>
         </div>
 <<div id="cards-container">

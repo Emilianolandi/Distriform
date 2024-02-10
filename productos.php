@@ -21,8 +21,11 @@
 <?php
 // Conexión a la base de datos
 $servername = "localhost";
+// $username = "id21638115_emiliano";
 $username = "root";
+// $password = "Emiliano21*.";
 $password = "";
+// $dbname = "id21638115_distribuidora";
 $dbname = "distribuidora_24";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
